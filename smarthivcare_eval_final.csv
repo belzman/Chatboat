@@ -1,0 +1,333 @@
+﻿question,answer,ground_truth,latency,language,bleu_score,rouge_l_score,chrf_plus_plus_score,bert_f1_score
+What is the primary goal of Antiretroviral Therapy (ART)?,"The primary goal of antiretroviral therapy is to suppress the replication of the virus and reduce the number of viruses in the blood.
+
+Additionally, it aims to increase the number of CD4 cells as much as possible to ultimately improve the general health of the client.
+
+It is important to note that while the therapy suppresses viral replication to below detectable levels, the virus cannot be completely eradicated from the body, which is why the medication must be taken for life.","The primary goal is to achieve viral suppression, restore immune function, and reduce HIV-related morbidity and mortality.",12.11798882484436,English,0.038265433699246586,0.1414141414141414,0.27568712234269693,0.7258784174919128
+How often should a patient undergo viral load testing?,"The frequency of viral load testing depends on the patient's specific situation:
+
+If a patient has low-level viraemia (50 to 1000 copies/ml) at their first test, they should receive enhanced adherence support and repeat the viral load test after 3 months.
+
+If the viral load remains in that same range after the repeat test, they should continue to have viral load testing every 6 months.
+
+If a patient has a viral load greater than 1000 copies/ml, they should receive enhanced adherence support for 3 months, followed by a repeat viral load test.
+
+It is important to note that viral load testing should not be performed when a patient has an acute infection or fever.
+
+Additionally, an individual must be taking antiretroviral therapy for at least 6 months before a treatment regimen can be determined to have failed.","Typically, viral load is tested 6 months after starting ART, and then every 12 months if the patient is stable.",8.254871129989624,English,0.02551793502139555,0.11320754716981132,0.20478356224626865,0.7020102143287659
+What should I do if I miss a dose of my ART medication?,"The provided text does not contain information regarding what steps to take if you miss a dose of your ART medication.
+
+Please consult your healthcare provider or pharmacist for specific instructions on how to manage missed doses.","Take the missed dose as soon as you remember, unless it is almost time for your next dose. Do not double the dose.",8.540954828262329,English,0.04747573105125849,0.1,0.24944352742301124,0.6842485666275024
+Can I stop taking ART if my viral load is undetectable?,"Based on the information provided, it is important to continue taking your antiretroviral therapy (ART).
+
+The documents explain that measuring viral suppression is a key indicator of effective treatment and that patients must continue to have access to safe, tolerable, and potent antiretrovirals to sustain progress in reducing morbidity and mortality.
+
+The viral load of patients receiving ART provides an indication of adherence to treatment and compliance with disease monitoring.
+
+Furthermore, the absence of routine monitoring and treatment can raise concerns about the development of resistance to first-line ART regimens, poor long-term patient outcomes, and an increased risk of HIV transmission.
+
+Therefore, maintaining treatment is essential for your health and to prevent the acquisition of HIV drug resistance.","No, ART is a lifelong treatment. Stopping it will allow the virus to multiply again.",9.601551532745361,English,0.01673713424000812,0.0888888888888889,0.14360875181809124,0.6837576627731323
+What is the importance of 95% adherence to ART?,"A high level of sustained adherence to antiretroviral therapy is necessary for several important reasons.
+
+It helps to suppress viral replication, which leads to improved immunological and clinical outcomes.
+
+Additionally, maintaining high adherence decreases the risk of developing antiretroviral drug resistance and reduces the risk of transmitting HIV to others.",High adherence is necessary to prevent drug resistance and maintain viral suppression.,8.87108564376831,English,0.06390070145350683,0.25806451612903225,0.38350670803468573,0.7710375189781189
+Does ART cure HIV?,"Based on the provided text, there is no mention of antiretroviral treatment (ART) curing HIV.
+
+Instead, the text emphasizes that ART is a lifelong commitment.
+
+It explains that ART is used to reduce HIV-related morbidity and mortality, prevent forward transmission of the virus, and manage the infection.
+
+Because the treatment is lifelong, the text highlights the importance of patient understanding and adherence to the medication.","No, ART does not cure HIV, but it controls the virus so you can live a long, healthy life.",7.986167907714844,English,0.03053880075083444,0.1411764705882353,0.19026598777323836,0.6963794827461243
+Can I share my ART medication with someone else who has HIV?,"No, you should not share your ART medication with anyone else.
+
+It is important to understand that while ART drugs reduce the risk of HIV transmission, they cannot be relied on to prevent other people from acquiring the infection.
+
+Furthermore, treatment should be based on an informed decision to initiate ART, and providers must be aware of all drugs a person is taking to manage potential drug interactions and ensure the treatment is appropriate for that specific individual.
+
+If someone else has HIV, they should consult with a healthcare provider to receive their own personalized care and treatment plan.","No, HIV treatment is individualized based on specific medical needs and resistance profiles.",11.035828590393066,English,0.023143694605020994,0.125,0.26263818921070997,0.7209267616271973
+What does U=U mean?,"Based on the provided documents, there is no information explaining the meaning of U=U.
+
+If you have other questions regarding HIV care, medication adherence, or health tips, I would be happy to help you with those.",Undetectable = Untransmittable. It means a person with an undetectable viral load cannot transmit HIV through sex.,8.11753249168396,English,0.03709091243806319,0.03773584905660377,0.16515641109762488,0.6416686773300171
+What is PrEP?,"PrEP stands for pre-exposure prophylaxis.
+
+It is a medication used as part of a combination prevention approach for individuals who are at substantial risk of HIV infection.
+
+To be eligible for PrEP, an individual must test HIV negative using a rapid antibody test and have no clinical suspicion of an acute HIV infection.
+
+PrEP is not contraindicated during pregnancy.
+
+While taking PrEP, clients receive ongoing support, including counseling on risk reduction and consistent condom use, routine STI screenings, family planning services, and regular HIV testing to ensure adherence and retention.
+
+An individual may stop taking PrEP once they are no longer at risk for HIV.
+
+In addition to oral medication, other forms of PrEP include the dapivirine vaginal ring, which is used every 28 days, and injectable PrEP, which is administered every two months.",Pre-Exposure Prophylaxis is a daily pill taken by HIV-negative people to prevent infection.,9.786301851272583,English,0.023512170422077237,0.10666666666666667,0.18031323798285132,0.6801598072052002
+What is PEP?,"In the context of HIV, PEP stands for post-exposure prophylaxis.
+
+It is a short-term antiretroviral treatment used to reduce the likelihood of HIV infection after a potential exposure.
+
+Examples of these exposures include needle stick injuries, splashes, bites, or suspected sexual assaults.
+
+PEP is provided free of charge for accidental occupational exposures for health workers and emergency personnel, as well as for rape victims.",Post-Exposure Prophylaxis is emergency medication taken within 72 hours of possible HIV exposure.,14.670427083969116,English,0.041392382319443734,0.175,0.2530148662044392,0.7067642211914062
+Can HIV be transmitted through breastfeeding?,"Yes, HIV can be transmitted through the breast milk of an HIV-positive mother.
+
+While not all breastfed infants of HIV-positive women will become infected, there is a risk of transmission during the breastfeeding period.
+
+Factors that increase this risk include advanced maternal HIV disease, such as a low CD4 count and high viral load, contracting a new HIV infection while breastfeeding, poor maternal nutritional status, and breast problems like mastitis, cracked nipples, or breast abscesses.","Yes, but the risk is significantly reduced if the mother is on effective ART with an undetectable viral load.",9.195029735565186,English,0.027646646087298245,0.12499999999999999,0.23349135130756174,0.6952266097068787
+How can a pregnant woman prevent passing HIV to her baby?,"To prevent passing HIV to a baby, it is essential to access quality maternal and newborn health services that integrate HIV testing and counseling.
+
+Providing antiretroviral therapy (ART) during pregnancy and breastfeeding is a highly effective strategy to reduce the risk of mother-to-child transmission.
+
+In many settings, this includes offering pregnant and breastfeeding women the option of receiving lifelong ART.
+
+Additionally, delivering HIV services through antenatal care and maternal and child health settings ensures that women can be initiated on and maintained on ART throughout their pregnancy and the postpartum period.","By taking ART consistently during pregnancy, delivery, and breastfeeding.",10.243613958358765,English,0.022269379732118275,0.09803921568627452,0.23953355166826706,0.707701563835144
+Does a condom prevent HIV transmission?,"Yes, condoms are effective at reducing the sexual transmission of HIV, provided that they are used consistently and correctly.","Yes, consistent and correct use of condoms highly reduces the risk of HIV transmission.",8.389888763427734,English,0.10830630507021792,0.30303030303030304,0.4799529576389898,0.8299062848091125
+What are common side effects of starting ART?,"When starting antiretroviral therapy (ART), it is important to be aware of potential complications, especially during the first few months of treatment.
+
+Some common issues that care providers look for include:
+
+Early adverse drug reactions, such as drug hypersensitivity, which are most common within the first three months of starting therapy.
+
+The development of opportunistic infections.
+
+The potential for immune reconstitution inflammatory syndrome (IRIS).
+
+This occurs in 10 to 30 percent of people starting ART, usually within the first 4 to 8 weeks.
+
+It can present as either a worsening of a previously diagnosed infection or the unmasking of a disease that was not clinically apparent before starting treatment.
+
+While these are important to monitor, it is also expected that most adults and children will see clinical and immunological improvement, including a rise in CD4 cell counts and virological suppression, as they adhere to their treatment.","Common side effects include nausea, fatigue, headache, and dizziness, which usually fade after a few weeks.",8.30469012260437,English,0.011904480724230879,0.061728395061728385,0.15756376442631526,0.6562654376029968
+What should I do if my ART causes severe skin rashes?,"If you experience a skin rash while taking antiretroviral therapy (ART), it is important to know that some skin reactions to drugs like nevirapine can be life-threatening.
+
+Because skin disorders in people with HIV are typically diagnosed based on clinical grounds, you should consult your healthcare provider immediately to have your symptoms evaluated.
+
+While many skin conditions associated with HIV can be cured or improved, some reactions require professional medical assessment to determine the cause and the appropriate course of action.
+
+Please reach out to your clinic or doctor right away to discuss any severe rashes you are experiencing.","Contact your healthcare provider immediately, as this could be a serious allergic reaction.",7.678234100341797,English,0.036185256827792965,0.08849557522123894,0.2678837905160471,0.6787238717079163
+Can I take herbal medicine with my ART?,"The provided text does not contain information regarding the use of herbal medicine alongside antiretroviral therapy (ART).
+
+It focuses on clinical management, adherence strategies, and the importance of monitoring for side effects or opportunistic infections during the first few months of treatment.
+
+I recommend speaking directly with your healthcare provider about any other substances you are taking to ensure they do not interfere with your ART.","You should consult your doctor first, as some herbs can interfere with the effectiveness of ART.",7.107391834259033,English,0.0314514092004474,0.0975609756097561,0.2448469338705128,0.708881139755249
+Is alcohol safe to consume while on ART?,"The provided text does not explicitly state whether alcohol is safe or unsafe to consume.
+
+However, it does note that the use of alcohol and other substances can contribute to poor adherence to antiretroviral therapy (ART).
+
+This is because alcohol and substance use can lead to forgetfulness, poor organization, and the diversion of monetary resources, all of which may negatively impact your treatment.","Moderate alcohol use is usually okay, but excessive drinking can lead to missed doses and liver strain.",8.254324197769165,English,0.04212110902160335,0.17500000000000002,0.23433385210910193,0.7034119963645935
+What kind of diet is recommended for people living with HIV?,"For people living with HIV, nutritional assessment, counseling, and support are essential parts of care.
+
+In food-insecure settings, programs should follow national policies on nutritional support to help maximize adherence to antiretroviral therapy and achieve the best health outcomes.
+
+Specifically, for those who are clinically undernourished, the recommended support depends on the severity of the condition:
+
+- Individuals with severe acute malnutrition, defined for adults as having a body mass index of less than 16 kg/m2, should receive ready-to-use therapeutic food.
+
+- Individuals with moderate acute malnutrition should receive supplementary food, depending on the availability of supplies.
+
+Because undernutrition significantly increases the risk of mortality for people living with HIV regardless of their treatment status, these nutritional interventions are a vital component of care.","A balanced diet rich in fruits, vegetables, lean protein, and whole grains is recommended.",9.115368127822876,English,0.012011317925894929,0.04316546762589928,0.12621589079858264,0.6412975788116455
+What is the difference between HIV and AIDS?,"Based on the information provided, there is no definition or explanation regarding the difference between HIV and AIDS.
+
+The text focuses on how HIV is transmitted and the biological mechanisms of how the virus infects cells.",HIV is the virus that causes the infection; AIDS is the advanced stage where the immune system is severely damaged.,8.747325420379639,English,0.06595800588816438,0.21428571428571427,0.292060192101921,0.7112388014793396
+How is HIV diagnosed?,"An HIV diagnosis is determined through a simple blood test.
+
+According to the provided guidelines, it is important that all people who receive a positive HIV diagnosis are retested to verify the result before starting antiretroviral therapy or HIV care.",HIV is diagnosed through blood or oral fluid tests that detect antibodies and antigens.,9.570234298706055,English,0.04119566303102713,0.18518518518518517,0.27747289290516586,0.7468873858451843
+Is there a vaccine for HIV?,"Based on the information provided, there is no mention of a vaccine for HIV.
+
+The text focuses on transmission routes, standard precautions for healthcare settings, and testing procedures.","Currently, there is no effective vaccine for HIV, though research is ongoing.",9.165054321289062,English,0.11649949409622418,0.3,0.35601128600830445,0.7833001613616943
+How soon after exposure should I get tested?,"You should have HIV serology performed immediately after the exposure.
+
+Following this initial test, you will need to undergo follow-up HIV testing at 6 weeks, 12 weeks, and 24 weeks after the exposure.",Most tests can detect HIV within 23 to 90 days after exposure.,9.208916902542114,English,0.04466216597703001,0.1739130434782609,0.23841014445897554,0.7534853219985962
+Can mosquitoes transmit HIV?,"Based on the information provided, there is no mention of mosquitoes transmitting HIV.
+
+The context specifies that HIV is transmitted through sexual contact, blood and body fluids, mother-to-child transmission, percutaneous exposure, and contaminated needles or medical equipment.","No, HIV cannot be transmitted by mosquitoes or other insects.",8.310166835784912,English,0.040668703998563635,0.163265306122449,0.2601801475502637,0.7536424398422241
+What is a CD4 count?,"A CD4 count is a laboratory result that measures the number of CD4 cells in a person's blood.
+
+For adults, this value is recorded as a specific number.
+
+For children under 5 years of age, the CD4 count is recorded as a percentage.
+
+You can calculate the CD4 percentage by taking the absolute CD4 count and dividing it by the total white blood cell count multiplied by the percentage of lymphocytes.
+
+Monitoring these counts is clinically important for people living with HIV to help guide care and treatment decisions.","A CD4 count measures the number of T-cells in your blood, which indicates the strength of your immune system.",8.496833324432373,English,0.058042177861324915,0.2181818181818182,0.28931117750333013,0.7385178804397583
+Is HIV a death sentence?,"Based on the information provided, HIV is a condition that requires lifelong treatment, which may come with side effects.
+
+While there is no preventative vaccine and some viruses have become drug-resistant, the provided text focuses on the importance of care and interventions.
+
+People with advanced HIV disease are at a high risk of death, especially if they have a low CD4 cell count.
+
+However, the text emphasizes that a package of interventions—including screening, treatment for opportunistic infections, rapid initiation of antiretroviral therapy (ART), and adherence support—should be offered to everyone, including those with advanced disease or those re-engaging with care.
+
+For infants and young children, early diagnosis and the immediate initiation of ART are critical, as they face higher risks of morbidity and mortality without intervention.","No, with modern ART, people living with HIV can have a normal life expectancy.",9.229687452316284,English,0.0161556575825753,0.08450704225352113,0.13084883798815686,0.6789021492004395
+የአርቲ (ART) መድሃኒት ዋና ጥቅሙ ምንድነው?,"የአርቲ (ART) መድሀኒት ዋና ጥቅሙ ኤችአይቪን ለመቆጣጠር እና በሽታው እንዳይከሰት ለመርዳት ነው።
+
+ኤችአይቪ ያለባቸው ሰዎች መድሀኒታቸውን በታዘዘላቸው መሰረት በመውሰድ የቫይረሱን መጠን ወደ ያልታወቀ ደረጃ ዝቅ ማድረግ ይችላሉ።
+
+ይህም ረጅም እድሜ እንዲኖሩ ያስችላቸዋል፣ እንዲሁም ቫይረሱ በወሲባዊ ግንኙነት ለኤችአይቪ-አሉታዊ አጋሮቻቸው እንዳይተላለፍ ይከላከላል።
+
+በተጨማሪም፣ ይህ መድሀኒት በጤና አጠባበቅ ሰራተኞች ላይ በተበከለ መርፌ በአጋጣሚ መወጋት ሲያጋጥም የኤችአይቪ የመያዝ እድልን ለመቀነስ ያገለግላል።",ዋናው ጥቅሙ በደም ውስጥ ያለውን የቫይረስ መጠን መቀነስ እና በሽታ የመከላከል አቅምን ማጠናከር ነው።,9.577886581420898,Amharic,0.038500563721894115,0.1388888888888889,0.1406992779456907,0.9314756393432617
+መድሃኒቱን መውሰድ ብረሳ ምን ማድረግ አለብኝ?,"መድሀኒቱን መውሰድ እንደረሱ ካስታወሱ ወዲያውኑ ይውሰዱ።
+
+ነገር ግን ለሚቀጥለው የክፍለ ጊዜ አወሳሰድ ከ4 ሰአት ያነሰ ጊዜ ከቀረዎት የረሱትን ትተው መደበኛውን ሰአት ይጠብቁ።
+
+በጭራሽ ሁለት መጠን በአንድ ላይ አይውሰዱ።",ያስታወሱበት ሰዓት ከሚቀጥለው የመድሃኒት ሰዓት ጋር ካልተቀራረበ ወዲያውኑ ይውሰዱ፤ ነገር ግን ሁለት መጠን በአንድ ላይ አይውሰዱ።,9.475071668624878,Amharic,0.25723962032456954,0.40909090909090917,0.4234108643143289,0.9851184487342834
+የአንድ ሰው የቫይረስ መጠን ምርመራ (Viral Load) በስንት ጊዜ መደረግ አለበት?,"በቀረበው መረጃ መሰረት የአንድ ሰው የቫይረስ መጠን (viral load) ምርመራ በምን ያህል ጊዜ መደረግ እንዳለበት የሚገልጽ ዝርዝር መረጃ የለም።
+
+ይሁን እንጂ የኤችአይቪ ኢንፌክሽንን ለማረጋገጥ የሚረዱ ሌሎች የምርመራ አይነቶች እንደ ፀረ-ሰው ምርመራ እና ጥምር (አንቲጅን አንቲቦዲ) ምርመራ በጽሁፉ ውስጥ ተጠቅሰዋል።
+
+ስለ ቫይረስ መጠን ምርመራ ተጨማሪ መረጃ ለማግኘት ከጤና ባለሙያ ጋር መማከር ይመከራል።",መድሃኒት እንደተጀመረ በ6 ወር፣ ከዚያም በየአመቱ ምርመራው መደረግ አለበት።,8.813259363174438,Amharic,0.025560860212461137,0.0655737704918033,0.09937827076717093,0.9023113250732422
+ጤነኛ ሆኖ ከተሰማኝ መድሃኒት ማቆም እችላለሁ?,"አይ፣ ጤነኛ ሆኖ ቢሰማዎትም መድሀኒትዎን ማቆም የለብዎትም።
+
+መድሀኒትዎን ሳይቋርጡ መውሰድ ለዘላቂ ጤናዎ ወሳኝ ነው።
+
+መድሀኒት መውሰድ ካቆሙ ቫይረሱ በሰውነትዎ ውስጥ እንዲባዛ እድል ይሰጡታል፤ ይህም የቫይረስ መጠንዎ እንዲጨምር ያደርጋል።
+
+ስለዚህ መድሀኒትዎ እስከተጠናቀቀ ድረስ ሳይቋረጥ መውሰድ ይኖርብዎታል።",አይቻልም፤ መድሃኒት ማቆም ቫይረሱ እንደገና እንዲበረታ እና መድሃኒቱን እንዲላመድ ያደርጋል።,7.508650779724121,Amharic,0.0433662281769497,0.13333333333333333,0.1631516042138001,0.9541383385658264
+መድሃኒቱን ሁልጊዜ በተመሳሳይ ሰዓት መውሰድ ለምን ያስፈልጋል?,"መድሀኒቱን በየቀኑ በተመሳሳይ ሰአት መውሰድ የሚያስፈልገው በደምዎ ውስጥ ያለው የመድሀኒት መጠን ሳይቀንስ ቫይረሱን ሁልጊዜ እንዲቆጣጠረው ለማድረግ ነው።
+
+ሰአት ማዛባት ቫይረሱ መድሀኒቱን እንዲለምድ ወይም የመድሀኒት መቋቋም (drug resistance) እንዲፈጠር ሊያደርግ ይችላል።",በደም ውስጥ ያለውን የመድሃኒት መጠን ወጥ በሆነ መልኩ ለመጠበቅ እና ቫይረሱ እንዳያገግም ለመከላከል ነው።,10.374961137771606,Amharic,0.12212865548711085,0.27272727272727276,0.17648375099303487,0.9274154305458069
+የኤአርቲ መድሃኒት ቫይረሱን ሙሉ በሙሉ ያጠፋል?,"ኤችአይቪን ሙሉ በሙሉ የሚያጠፋ መድሀኒት የለም።
+
+ይሁን እንጂ የፀረ-ኤችአይቪ ህክምና ወይም ኤአርቲ (ART) ቫይረሱን ለመቆጣጠር እና በሽታው እንዳይከሰት ለመከላከል በጣም ውጤታማ ነው።
+
+ኤችአይቪ ያለባቸው ሰዎች መድሀኒታቸውን በታዘዘላቸው መሰረት በአግባቡ ሲወስዱ የቫይረሱ መጠን በሰውነታቸው ውስጥ በጣም ዝቅተኛ ስለሚሆን ረጅም እድሜ መኖር ይችላሉ፤ እንዲሁም ቫይረሱን ለሌሎች አጋሮቻቸው አያስተላልፉም።",አያጠፋም፤ ነገር ግን ቫይረሱ እንዳይባዛ በማድረግ ረጅም እና ጤናማ ህይወት ለመምራት ይረዳል።,12.7394700050354,Amharic,0.030421991288759425,0.06779661016949153,0.12129350058837594,0.9332120418548584
+መድሃኒቴን ለሌላ ሰው ማካፈል እችላለሁ?,"አይ፣ መድሀኒትዎን ለሌላ ሰው ማካፈል አይችሉም።
+
+የቀረበው መረጃ እንደሚያሳየው የኤችአይቪ ህክምና (ART) እና ሌሎች እንደ ኮ-ትሪሞክሳዞል ያሉ መድሀኒቶች በህክምና ባለሙያዎች የሚታዘዙት ለታካሚው ሁኔታ ተገቢ ሆኖ ሲገኝ ነው።
+
+መድሀኒቶችዎን በታዘዘልዎ መሰረት ብቻ መውሰድ ኢንፌክሽኑን ለመቆጣጠር እና በሽታው እንዳይባባስ ለመከላከል ወሳኝ ነው።
+
+ማንኛውም አዲስ ምልክት ወይም ጥያቄ ካለዎት የህክምና ቡድንዎን ማማከር እና ማሳወቅ ይኖርብዎታል።",አይቻልም፤ መድሃኒት የሚታዘዘው በግለሰቡ የጤና ሁኔታ እና የቫይረስ አይነት ላይ ተመስርቶ ነው።,8.287388324737549,Amharic,0.028489295756568254,0.09230769230769231,0.11317683555199891,0.9334737658500671
+U=U ማለት ምን ማለት ነው?,"በቀረበው መረጃ መሰረት ስለ u=u (Undetectable = Untransmittable) የሚገልጽ ዝርዝር ማብራሪያ የለም።
+
+ነገር ግን ኤችአይቪን በተመለከተ ተጨማሪ መረጃ ከፈለጉ ወይም ስለ ህክምናዎ እና ስለ ጤናዎ ጥያቄ ካለዎት ለመርዳት ዝግጁ ነኝ።",በደም ውስጥ ያለው የቫይረስ መጠን በጣም ዝቅተኛ ከሆነ (undetectable) ቫይረሱ በግብረ ስጋ ግንኙነት አይተላለፍም (untransmittable) ማለት ነው።,8.334520816802979,Amharic,0.044644767873512764,0.0851063829787234,0.236370981439684,0.883887529373169
+PrEP (ፕሪፕ) ምንድነው?,"ፕሪፕ (prep) ወይም ቅድመ-መጋለጥ ፕሮፊላክሲስ ለኤችአይቪ ኢንፌክሽን ከፍተኛ ተጋላጭነት ላላቸው ሰዎች የሚሰጥ የመከላከያ መድኃኒት ነው።
+
+ይህ መድኃኒት እንደ ትሩቫዳ ወይም ዴስኮቪ ያሉ ዕለታዊ ክኒኖችን መውሰድን ያካትታል።
+
+ፕሪፕ በግብረ ሥጋ ግንኙነት ወይም በመርፌ መድኃኒት አጠቃቀም አማካኝነት በኤችአይቪ የመያዝ አደጋን በእጅጉ ይቀንሳል።
+
+በተከታታይ ሲወሰድ፣ ፕሪፕ በኤችአይቪ የመያዝ እድልን እስከ 99 በመቶ እንደሚቀንስ ታይቷል።",慢性病 ቫይረሱ የሌለባቸው ሰዎች ግን ለቫይረሱ ተጋላጭ ከሆኑ አስቀድመው በመውሰድ ራሳቸውን የሚከላከሉበት መድሃኒት ነው።,9.108458995819092,Amharic,0.036148515178385354,0.09090909090909091,0.1259581097864621,0.8786087036132812
+PEP (ፔፕ) ምንድነው?,"ፔፕ (PEP) ማለት ለኤችአይቪ ከተጋለጡ በኋላ የበሽታውን ስርጭት ለመከላከል የሚወሰዱ የፀረ-ኤችአይቪ መድሀኒቶች ስብስብ ነው።
+
+ይህንን ህክምና ለመጀመር ለኤችአይቪ ከተጋለጡበት ጊዜ ጀምሮ በ72 ሰአታት ውስጥ ወዲያውኑ የህክምና እርዳታ ማግኘት በጣም አስፈላጊ ነው።
+
+በተለምዶ ይህ ህክምና ለ28 ቀናት ያህል እንዲወሰድ ይታዘዛል።",ለቫይረሱ ተጋላጭ ከሆኑ በኋላ በ72 ሰአታት ውስጥ በመጀመር ስርጭቱን ለመከላከል የሚወሰድ አስቸኳይ መድሃኒት ነው።,8.403850317001343,Amharic,0.06666337489197861,0.18518518518518517,0.2747418726964819,0.9347508549690247
+ኤች አይ ቪ በጡት ወተት ይተላለፋል?,"አዎ፣ ኤች አይ ቪ በእርግዝና ወቅት ወይም ጡት በማጥባት ጊዜ ከእናት ወደ ልጅ ሊተላለፍ ይችላል።
+
+ስለዚህ ጉዳይ ተጨማሪ መረጃ ወይም ድጋፍ ከፈለጉ የጤና ባለሙያዎን ማማከር ተገቢ ነው።",አዎ ይተላለፋል፤ ነገር ግን እናቲቱ መድሃኒቷን በትክክል የምትወስድ ከሆነ የመተላለፍ እድሉ በጣም ዝቅተኛ ነው።,7.485175132751465,Amharic,0.04970745472800838,0.0975609756097561,0.10842510049910975,0.9820936322212219
+አንዲት ነፍሰ ጡር እናት ቫይረሱ ወደ ልጇ እንዳይተላለፍ ምን ማድረግ አለባት?,"ስለጠየቁኝ እናመሰግናለን።
+
+በቀረበው መረጃ መሰረት፣ ኤችአይቪ ማንንም ሳይለይ ጥንቃቄ የጎደለው የግብረ ስጋ ግንኙነት የሚፈጽም ማንኛውንም ሰው ሊያጠቃ እንደሚችል ተገልጿል።
+
+ይሁን እንጂ ለነፍሰ ጡር እናቶች ቫይረሱ ወደ ልጅ እንዳይተላለፍ በተለየ ሁኔታ ምን ማድረግ እንዳለባቸው የሚገልጽ ዝርዝር መረጃ በቀረበው ጽሁፍ ውስጥ አልተካተተም።
+
+በአጠቃላይ ኤችአይቪን ለመከላከል የሚረዱ እንደ ደህንነቱ የተጠበቀ የግብረ ስጋ ግንኙነት (ኮንዶም መጠቀም)፣ የወሲብ አጋሮችን ቁጥር መቀነስ እና መደበኛ የኤችአይቪ ምርመራ ማድረግ ያሉ ዘዴዎች በጽሁፉ ውስጥ ተጠቅሰዋል።
+
+ለነፍሰ ጡር እናቶች ተገቢውን የህክምና ምክር እና መረጃ ለማግኘት በአቅራቢያዎ ወደሚገኝ የጤና ተቋም በመሄድ ከጤና ባለሙያዎች ጋር መማከር በጣም አስፈላጊ ነው።",የኤአርቲ መድሃኒቷን በእርግዝና፣ በወሊድ እና ጡት በማጥባት ጊዜ በትክክል መውሰድ አለባት።,8.675476551055908,Amharic,0.013749207727756516,0.020408163265306124,0.056578422464754044,0.9256337881088257
+ኮንዶም ኤች አይ ቪን ይከላከላል?,"አዎ፣ ኮንዶም ኤችአይቪን ለመከላከል ወሳኝ ሚና አለው።
+
+ኤችአይቪን ለመከላከል የሚከተሉትን ነጥቦች መገንዘብ ያስፈልጋል፦
+
+ከማንኛውም አይነት የግብረ ስጋ ግንኙነት መቆጠብ ወይም አንድ ለአንድ የሆነ ተማማኝ የትዳር ጓደኛ እስኪያገኙ ድረስ በጥብቅ መጠንቀቅ ይገባል።
+
+ያለ ኮንዶም የሚደረግ ግንኙነት ከፍተኛ ስጋት አለው።
+
+ኤችአይቪ እንዳለባቸው የሚያውቁ ባለትዳሮች ወይም አብረው ያሉ ጓደኞች በግብረ ስጋ ግንኙነት ጊዜ ኮንዶም መጠቀም አለባቸው።
+
+ይህ ከተለያዩ የአባላዘር በሽታዎች ለመከላከል እና በተለያዩ የኤችአይቪ ንኡስ ዝርያዎች ላለመጋለጥ ይረዳል።
+
+ከሁለት አንዳቸው ብቻ ኤችአይቪ ያለበት ከሆነ፣ ሁልጊዜ ኮንዶም መጠቀም እና ቅባት (lubricant) ያለው ኮንዶም መጠቀም ግዴታ ነው።
+
+በአጠቃላይ ኮንዶም መጠቀም ደህንነቱ የተጠበቀ የግብረ ስጋ ግንኙነት ለማድረግ ከሚረዱ ዋና ዋና ስልቶች አንዱ ነው።",አዎ፣ ኮንዶምን በትክክል እና ሁልጊዜ መጠቀም ኤች አይ ቪ የመያዝ እድልን በከፍተኛ ሁኔታ ይቀንሳል።,13.211235284805298,Amharic,0.01621958173281295,0.07207207207207207,0.12532661141530835,0.9275639057159424
+መድሃኒት ሲጀመር ምን አይነት የጎንዮሽ ጉዳቶች ሊያጋጥሙ ይችላሉ?,"የቀረበው መረጃ መድሀኒት ሲጀመር ሊያጋጥሙ ስለሚችሉ የጎንዮሽ ጉዳቶች ዝርዝር ባይሰጥም፣ የፀረ-ኤችአይቪ መድሀኒቶች ከሌሎች መድሀኒቶች ጋር ሲገናኙ በሰውነት ላይ የማይፈለጉ ውጤቶችን ሊያስከትሉ እንደሚችሉ ይገልጻል።
+
+በተጨማሪም፣ በደም ውስጥ ያለው የስኳር እና የስብ መጠን መጨመር እንዲሁም ሄሞፊሊያ ባለባቸው ታካሚዎች ላይ የደም መፍሰስ መጨመር ከፀረ-ኤችአይቪ መድሀኒቶች ጋር ተያይዘው ሊከሰቱ የሚችሉ ችግሮች መሆናቸውን ይጠቅሳል።
+
+ሌሎች መድሀኒቶችን የሚወስዱ ከሆነ ለሀኪምዎ ማሳወቅ አስፈላጊ ነው።
+
+የጎንዮሽ ጉዳቶችዎ ከፍ ያለ ከሆኑ ሀኪምዎ የመድሀኒት ጭብጥዎን (ሬጀሜን) ሊቀይርልዎ ይችላል።",ማቅለሽለሽ፣ ራስ ምታት፣ ድካም እና መደባለቅ ሊታዩ ይችላሉ፤ እነዚህም በጥቂት ሳምንታት ውስጥ ይጠፋሉ።,9.949260711669922,Amharic,0.018938767636553357,0.024096385542168672,0.07418127350836252,0.9325008392333984
+ከባድ ሽፍታ ካጋጠመኝ ምን ማድረግ አለብኝ?,"በቀረበው መረጃ መሰረት ስለ ከባድ ሽፍታ የተጠቀሰ ነገር የለም።
+
+ነገር ግን ኤችአይቪን በተመለከተ ማንኛውም የጤና ችግር ሲያጋጥምዎት በአቅራቢያዎ ወደሚገኝ የጤና ተቋም በመሄድ የጤና ባለሙያዎችን ማማከር እና አስፈላጊውን ምርመራ ማድረግ ተገቢ ነው።
+
+የጤና ባለሙያዎች ሁኔታዎን በመገምገም ትክክለኛውን ህክምና እንዲያገኙ ይረዱዎታል።",ወዲያውኑ ወደ ጤና ተቋም በመሄድ ሀኪም ማማከር ያስፈልጋል።,10.184182405471802,Amharic,0.0608138969580987,0.1702127659574468,0.17994786403967825,0.9415332078933716
+ባህላዊ መድሃኒቶችን ከኤአርቲ ጋር መውሰድ ይቻላል?,"ስለ ባህላዊ መድሀኒቶች እና የፀረ-ኤችአይቪ ህክምና (ART) አብሮ መወሰድ በተመለከተ በቀረበው መረጃ ውስጥ የተጠቀሰ ነገር የለም።
+
+ነገር ግን፣ የፀረ-ኤችአይቪ ህክምና (ART) ቫይረሱን ለመቆጣጠር በየቀኑ መወሰድ ያለበት ዋና የህክምና መንገድ እንደሆነ ተገልጿል።
+
+ማንኛውም አዲስ ምልክት ወይም ለውጥ ሲኖርዎት ለህክምና ቡድንዎ ማሳወቅ እና ምክር መጠየቅ በጣም አስፈላጊ ነው።",አይመከርም፤ አንዳንድ ባህላዊ መድሃኒቶች የኤአርቲ መድሃኒቱን ስራ ሊያስተጓጉሉ ይችላሉ።,7.550094366073608,Amharic,0.03295828165685029,0.07017543859649122,0.09539316141685905,0.8965811729431152
+መድሃኒት በሚወሰድበት ጊዜ አልኮል መጠጣት ይቻላል?,"በቀረበው መረጃ መሰረት ስለ አልኮል መጠጣት የተጠቀሰ ነገር የለም።
+
+ነገር ግን መድሀኒትዎን በየቀኑ በተመሳሳይ ሰአት መውሰድ በደምዎ ውስጥ ያለው የመድሀኒት መጠን ሳይቀንስ ቫይረሱን ሁልጊዜ እንዲቆጣጠረው ለማድረግ በጣም አስፈላጊ ነው።
+
+ሰአት ማዛባት ወይም መድሀኒት መርሳት ቫይረሱ መድሀኒቱን እንዲለምድ (drug resistance) ሊያደርግ ስለሚችል ጥንቃቄ ማድረግ ያስፈልጋል።
+
+ስለ ማንኛውም ተጨማሪ ጥያቄዎች ወይም ስጋቶች የህክምና ቡድንዎን ማማከር ይችላሉ።",ከመጠን ያለፈ አልኮል መድሃኒት መርሳትን እና የጉበት ጫናን ስለሚያስከትል አይመከርም።,7.513955354690552,Amharic,0.033246128899473676,0.09375000000000001,0.122949951457572,0.917604386806488
+ኤች አይ ቪ ያለባቸው ሰዎች ምን አይነት አመጋገብ ያስፈልጋቸዋል?,"በቀረበው መረጃ መሰረት ኤች አይ ቪ ያለባቸው ሰዎች ምን አይነት አመጋገብ መከተል እንዳለባቸው የሚገልጽ ዝርዝር መረጃ የለም።
+
+ነገር ግን ለኤችአይቪ ተጋልጠው ከሆነ ወይም ምልክቶች ካዩ፣ ውጤቱን ለማሻሻል እና የቫይረሱን ስርጭት ለመከላከል ቶሎ ምርመራ ማድረግ እና ብቃት ያለው ዶክተር ማማከር አስፈላጊ ነው።
+
+ለህክምና እርዳታ ቀጠሮ መያዝዎን አይርሱ።",ፍራፍሬ፣ አትክልት፣ ፕሮቲን እና ጥራጥሬዎችን የያዘ የተመጣጠነ ምግብ መመገብ ይመከራል።,7.103910684585571,Amharic,0.02614431568998955,0.03571428571428571,0.07341677973541912,0.953984797000885
+በኤች አይ ቪ እና በኤድስ መካከል ያለው ልዩነት ምንድነው?,"ኤች አይ ቪ እና ኤድስ የተለያዩ ናቸው።
+
+ኤች አይ ቪ የሰው ልጅ የበሽታ መከላከያ ቫይረስ ሲሆን፣ ኤድስ ደግሞ የዚህ ቫይረስ የመጨረሻው ወይም ከፍተኛው ደረጃ ነው።
+
+በኤች አይ ቪ እና በኤድስ መካከል ያሉ ዋና ዋና ልዩነቶች የሚከተሉት ናቸው፡
+
+ኤች አይ ቪ (HIV)፡ ይህ ቫይረስ በሰውነት ውስጥ ያለውን የበሽታ መከላከያ ስርዓት የሚያጠቃ ቫይረስ ነው።
+
+አንድ ሰው በኤች አይ ቪ ሲያዝ፣ ቫይረሱ በሰውነቱ ውስጥ ይኖራል እንጂ ወዲያውኑ ኤድስ አይባልም።
+
+ኤድስ (AIDS)፡ ይህ ደግሞ የኤች አይ ቪ ኢንፌክሽን በጣም በተራቀቀበት ደረጃ ላይ የሚከሰት ሁኔታ ነው።
+
+አንድ ሰው ኤድስ አለበት የሚባለው፡
+የበሽታ መከላከያ ህዋሱ (ሲዲ 4) ከ200 ሴሎች በታች ሲወርድ፣ ወይም
+ኤድስን የሚገልጽ ወይም የሚያሳይ ከባድ ህመም (ኦፖርቹኒስቲክ ኢንፌክሽን ወይም ካንሰር) ሲከሰት ነው።
+
+በአጭሩ ኤች አይ ቪ ቫይረሱ ራሱ ሲሆን፣ ኤድስ ደግሞ ቫይረሱ የበሽታ መከላከያ ስርዓቱን በእጅጉ በመጉዳቱ ምክንያት የሚከሰት የጤና ሁኔታ ነው።
+
+ኤች አይ ቪ ያለበት ሰው በትክክል የፀረ-ኤችአይቪ መድኃኒቶችን በመውሰድ ቫይረሱን መቆጣጠር እና ወደ ኤድስ ደረጃ እንዳይደርስ መከላከል ይችላል።",ኤች አይ ቪ ቫይረሱ ነው፤ ኤድስ ደግሞ በቫይረሱ ምክንያት የመከላከል አቅም በጣም የሚዳከምበት ደረጃ ነው።,10.718876361846924,Amharic,0.03612052372042765,0.1234567901234568,0.18057740451127505,0.9064909815788269
+ኤች አይ ቪ እንዴት ይታወቃል?,"የኤችአይቪ ኢንፌክሽን ምልክቶች እንደ በሽታው ደረጃ እና እንደ ግለሰቡ የሲዲ 4 ህዋስ ብዛት ይወሰናል።
+
+በሽታው በሶስት ዋና ዋና ደረጃዎች ይከፈላል።
+
+በመጀመሪያው ደረጃ ወይም አጣዳፊ የመጀመሪያ ደረጃ ኢንፌክሽን ላይ ቫይረሱ በሰውነት ውስጥ በፍጥነት ይባዛል።
+
+በዚህ ወቅት ግለሰቦች እንደ ትኩሳት፣ ራስ ምታት እና ሽፍታ ያሉ የጉንፋን መሰል ምልክቶች ሊታዩባቸው ይችላሉ።
+
+በሁለተኛው ደረጃ ወይም ክሊኒካዊ መዘግየት ደረጃ ላይ ቫይረሱ ቀስ በቀስ መጨመሩን ቢቀጥልም፣ በሽተኛው ምንም አይነት ልዩ ምልክቶች ላይኖሩት ይችላሉ።
+
+አንዳንድ ሰዎች የሊምፍ ኖዶቻቸው የማያቋርጥ እብጠት ሊኖራቸው ይችላል።
+
+በሶስተኛው እና በጣም የከፋው ደረጃ ወይም ኤድስ ላይ የበሽታ መከላከል ስርአቱ በጣም ይጎዳል።
+
+በዚህ ደረጃ ላይ ኤድስን የሚገልጽ ህመም መኖር ወይም የሲዲ 4 ህዋስ ብዛት ከ200 ሴሎች በታች መውረድ እንደ ምልክት ይወሰዳል።
+
+በዚህ ወቅት ሰውነትን ከኢንፌክሽን እና ከካንሰር የሚከላከለው የበሽታ ተከላካይ ህዋሳት በከፍተኛ ሁኔታ ስለሚቀንሱ፣ ኦፖርቹኒስቲክ ኢንፌክሽኖች ወይም የተለያዩ ካንሰሮች ሊከሰቱ ይችላሉ።",በደም ምርመራ ወይም በአፍ ውስጥ በሚወሰድ ፈሳሽ አማካኝነት በሚደረግ የምርመራ አይነት ይታወቃል።,15.398318529129028,Amharic,0.011179990529170654,0.043165467625899276,0.0746744314155899,0.901566743850708
+ለኤች አይ ቪ ክትባት አለ?,"በአሁኑ ሰዓት ኤችአይቪ እንዳይዘን የሚከላከል ክትባት የለም።
+
+ነገር ግን ቫይረሱ ቢኖርም ከጤና ባለሙያዎች ጋር በመመካከር እና የፀረ-ኤችአይቪ መድኃኒቶችን በትክክል በመውሰድ እንደ ማንኛውም ሰው ጤናማ እና ውጤታማ ህይወት መምራት ይቻላል።",እስካሁን ድረስ ውጤታማ የሆነ የኤች አይ ቪ ክትባት የለም።,11.865240335464478,Amharic,0.05705093314691302,0.10256410256410256,0.2215697471768855,0.9489150047302246
+ቫይረሱ ካለበት ሰው ጋር ንክኪ ቢኖረኝ መቼ መመርመር አለኝ?,"ኤችአይቪ ካለበት ሰው ጋር ንክኪ ከነበረዎት፣ ስለ ኤችአይቪ ሁኔታዎ እና ስለ ወሲባዊ ታሪክዎ መደበኛ ምርመራ ማድረግ አስፈላጊ ነው።
+
+መደበኛ ምርመራ ማድረግ ቫይረሱ አስቀድሞ እንዲለይ እና ሳያውቁት ቫይረሱን ለሌሎች እንዳያስተላልፉ ይረዳል።
+
+ስለሆነም፣ ለኤችአይቪ ተጋላጭነት ካጋጠመዎት በአቅራቢያዎ ወደሚገኝ የጤና ተቋም በመሄድ የምርመራ አገልግሎት ማግኘት ተገቢ ነው።",አብዛኛውን ጊዜ ከ23 እስከ 90 ቀናት ባለው ጊዜ ውስጥ ምርመራው ውጤት ያሳያል።,9.927476406097412,Amharic,0.027347130611442165,0.03571428571428572,0.06478957245033387,0.9350709319114685
+ትንኝ ኤች አይ ቪን ታስተላልፋለች?,"በቀረበው መረጃ መሰረት ትንኝ ኤች አይ ቪን እንደምታስተላልፍ የሚገልጽ ምንም አይነት ማስረጃ የለም።
+
+የኤች አይ ቪ ስርጭት መንገዶች በዋናነት የሚከተሉትን ያካትታሉ፡
+
+በህገ-ወጥ የመድሀኒት ተጠቃሚዎች መካከል የተበከሉ መርፌዎችን መጋራት፣ የተበከለውን ደም ላልተያዘ ሰው መስጠት፣ እንዲሁም በእርግዝና ወቅት ወይም ጡት በማጥባት ከእናት ወደ ልጅ የሚደረግ ስርጭት ናቸው።",አይ፣ ኤች አይ ቪ በትንኝ ወይም በሌሎች ነፍሳት አይተላለፍም።,9.196882486343384,Amharic,0.055967009612738844,0.1818181818181818,0.14485041830297696,0.9384817481040955
+የሲዲ 4 (CD4) መጠን ምንድነው?,"የሲዲ 4 (CD4) የህዋስ ብዛት ማለት የሰውነትን የበሽታ መከላከል ስርአት ጤንነት የሚለካ እና የኤችአይቪ ኢንፌክሽንን እድገት ለመገምገም የሚረዳ መለኪያ ነው።
+
+በአዋቂዎች ላይ በቁጥር የሚገለጽ ሲሆን፣ ከ5 አመት በታች ባሉ ህጻናት ላይ ደግሞ በመቶኛ ይለካል።",በደም ውስጥ ያሉ ነጭ የደም ሴሎችን በመቁጠር የሰውነትን የመከላከል አቅም የሚለካ ምርመራ ነው።,10.350228071212769,Amharic,0.04466216597703001,0.1702127659574468,0.18108783828431801,0.9029024243354797
+ኤች አይ ቪ መያዝ ማለት ሞት ማለት ነው?,"አይደለም፣ ኤች አይ ቪ መያዝ ማለት ሞት ማለት አይደለም።
+
+ምንም እንኳን ኤች አይ ቪን ሙሉ ለሙሉ የሚያድን መድሀኒት ባይኖርም፣ ውጤታማ የሆኑ የፀረ-ኤችአይቪ ህክምናዎች (ART) አሉ።
+
+ኤች አይ ቪ ያለባቸው ሰዎች የታዘዙላቸውን መድሀኒቶች በትክክል በመውሰድ ቫይረሱን መቆጣጠር ይችላሉ።
+
+ይህን በማድረጋቸውም ረጅም እድሜ መኖር፣ እንደ ማንኛውም ሰው ስራቸውን መስራት እና ጤናማ ህይወት መምራት ይችላሉ።
+
+በተጨማሪም መድሀኒቱን በትክክል የሚወስዱ ሰዎች ቫይረሱ በደማቸው ውስጥ በጣም ዝቅተኛ ስለሚሆን ለወሲብ አጋሮቻቸው አያስተላልፉም።
+
+ስለዚህ ኤች አይ ቪ ያለበት ሰው ከጤና ባለሙያ ጋር በመመካከር ተገቢውን ህክምና በማግኘት ከቫይረሱ ጋር ተስማምቶ መኖር ይቻላል።",አይደለም፤ ዘመናዊ የኤአርቲ መድሃኒቶችን በመጠቀም እንደ ማንኛውም ሰው ረጅም እድሜ መኖር ይቻላል።,9.24094557762146,Amharic,0.042224067270626546,0.12371134020618557,0.23091028712842676,0.923058032989502

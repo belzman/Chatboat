@@ -1,0 +1,34 @@
+[
+  {
+    "question": "የመጀመሪያ መስመር የኤኤርቲ መድሀኒት ምንድነው?",
+    "language": "Amharic",
+    "prediction": "በቀረበው መረጃ መሰረት ስለ መጀመሪያ መስመር የኤአርቲ (ART) መድሀኒት ዝርዝር መግለጫ አልተጠቀሰም።\n\nነገር ግን ውጤታማ የኤችአይቪ ህክምና ወይም የፀረ-ኤችአይቪ ህክምና (ART) እንደሚገኝ እና ይህ ህክምና ኢንፌክሽኑን ለመቆጣጠር እና በሽታው እንዳይከሰት እንደሚረዳ ተገልጿል።\n\nስለ መድሀኒትዎ ዝርዝር መረጃ ለማግኘት የህክምና ቡድንዎን ማማከር ይችላሉ።\n\n📚 የመረጃ ምንጭ (Sources): Amharic_Guideline.pdf",
+    "ground_truth": "TDF + 3TC + DTG",
+    "BLEU": 0,
+    "BERTScore": 0.5858582258224487
+  },
+  {
+    "question": "ART መድሀኒት ምን ያህል ጊዜ ይወስዳል?",
+    "language": "Amharic",
+    "prediction": "የኤአርቲ መድሀኒትን በየቀኑ በተመሳሳይ ሰአት መውሰድ ያስፈልጋል።\n\nመድሀኒቱን በየቀኑ በተመሳሳይ ሰአት መውሰድ በደምዎ ውስጥ ያለው የመድሀኒት መጠን ሳይቀንስ ቫይረሱን ሁልጊዜ እንዲቆጣጠረው ለማድረግ ይረዳል።\n\nሰአት ማዛባት ቫይረሱ መድሀኒቱን እንዲለምድ ሊያደርግ ይችላል።\n\n📚 የመረጃ ምንጭ (Sources): Amharic_Guideline.pdf",
+    "ground_truth": "Daily, lifelong treatment",
+    "BLEU": 0,
+    "BERTScore": 0.5701450109481812
+  },
+  {
+    "question": "What is the recommended first-line ART regimen?",
+    "language": "English",
+    "prediction": "For adolescents (10 to 19 years or weight 30 kg or more), adults, and pregnant or breastfeeding women, the preferred first-line regimen is TDF + 3TC + DTG (fixed-dose combination).\n\nAlternative regimens include TDF + 3TC + EFV, AZT + 3TC + DTG, AZT + 3TC + EFV, AZT + 3TC + ATV/r, TDF + 3TC + ATV/r, or ABC + 3TC + DTG.\n\nFor children older than 4 weeks and weighing at least 3 kg but less than 10 years, the preferred first-line regimen is ABC + 3TC + DTG.\n\nAlternative regimens for this group include ABC + 3TC + LPV/r, AZT + 3TC + DTG, ABC + 3TC + EFV, AZT + 3TC + EFV, or AZT + 3TC + LPV/r.\n\nPlease note that ABC or boosted PIs (ATV/r, LPV/r) can be used in special circumstances for clients who cannot take DTG or EFV due to contraindications or side effects.\n\n📚 የመረጃ ምንጭ (Sources): ART2022.pdf, 2018_RVI_GUIDELINE_YG.pdf",
+    "ground_truth": "TDF + 3TC + DTG",
+    "BLEU": 0.02114910788113426,
+    "BERTScore": -0.18084540963172913
+  },
+  {
+    "question": "How often should ART be taken?",
+    "language": "English",
+    "prediction": "Taking ART is a lifelong commitment.\n\nWhile the first six months of therapy are especially important for monitoring your health and managing potential reactions, it is a treatment that you will need to continue throughout your life.\n\n📚 የመረጃ ምንጭ (Sources): ART2022.pdf, RVI 2021_YG.pdf, 2018_RVI_GUIDELINE_YG.pdf",
+    "ground_truth": "Daily, lifelong treatment",
+    "BLEU": 0.007880387030946002,
+    "BERTScore": -0.11039525270462036
+  }
+]
