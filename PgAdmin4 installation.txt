@@ -1,0 +1,152 @@
+C:\Users\Belayneh>wsl
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt-get update
+[sudo] password for belayneh:
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:3 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+apt-transport-https is already the newest version (2.8.3).
+ca-certificates is already the newest version (20240203).
+curl is already the newest version (8.5.0-2ubuntu10.6).
+gnupg is already the newest version (2.4.4-2ubuntu17.4).
+lsb-release is already the newest version (12.0-2).
+The following packages were automatically installed and are no longer required:
+  bridge-utils dns-root-data dnsmasq-base libllvm19 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 34 not upgraded.
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+File '/usr/share/keyrings/docker-archive-keyring.gpg' exists. Overwrite? (y/N) y
+belayneh@Belayneh:/mnt/c/Users/Belayneh$
+echo \
+  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt-get update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:4 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt-get install docker-ce docker-ce-cli containerd.io
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+docker-ce is already the newest version (5:29.1.5-1~ubuntu.24.04~noble).
+docker-ce-cli is already the newest version (5:29.1.5-1~ubuntu.24.04~noble).
+containerd.io is already the newest version (2.2.1-1~ubuntu.24.04~noble).
+The following packages were automatically installed and are no longer required:
+  bridge-utils dns-root-data dnsmasq-base libllvm19 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 34 not upgraded.
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo usermod -aG docker $USER
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo service docker start
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo service docker restart
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:3 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+34 packages can be upgraded. Run 'apt list --upgradable' to see them.
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt install docker-compose
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+docker-compose is already the newest version (1.29.2-6ubuntu1).
+The following packages were automatically installed and are no longer required:
+  bridge-utils dns-root-data dnsmasq-base libllvm19 ubuntu-fan
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 34 not upgraded.
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ sudo apt-get update
+Hit:1 http://security.ubuntu.com/ubuntu noble-security InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu noble InRelease
+Hit:3 https://download.docker.com/linux/ubuntu noble InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+Reading package lists... Done
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ docker-compose --version
+docker-compose version 1.29.2, build unknown
+belayneh@Belayneh:/mnt/c/Users/Belayneh$ cd Broadsea
+belayneh@Belayneh:/mnt/c/Users/Belayneh/Broadsea$ docker compose --profile default up -d
+[+] Running 9/9
+ ✔ Volume rstudio-home-data      Created                                                                           0.0s
+ ✔ Volume rstudio-tmp-data       Created                                                                           0.0s
+ ✔ Volume atlasdb-postgres-data  Created                                                                           0.0s
+ ✔ Container broadsea-hades      Started                                                                           2.8s
+ ✔ Container broadsea-content    Started                                                                           2.7s
+ ✔ Container traefik             Started                                                                           2.7s
+ ✔ Container ohdsi-webapi        Started                                                                           2.6s
+ ✔ Container broadsea-atlasdb    Started                                                                           2.7s
+ ✔ Container ohdsi-atlas         Started                                                                           2.7s
+belayneh@Belayneh:/mnt/c/Users/Belayneh/Broadsea$ docker ps -a
+CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS                      PORTS                                                                                      NAMES
+db8a7d8ce8cb   traefik:v2.9.4                 "/entrypoint.sh trae…"   13 seconds ago   Up 10 seconds               0.0.0.0:80->80/tcp, [::]:80->80/tcp, 0.0.0.0:443->443/tcp, [::]:443->443/tcp               traefik
+cd5376684ad5   ohdsi/webapi:latest            "/__cacert_entrypoin…"   13 seconds ago   Up 10 seconds               8080/tcp                                                                                   ohdsi-webapi
+8af9357ac170   nginx                          "sh /tmp/envsubst.sh"    13 seconds ago   Up 10 seconds               80/tcp                                                                                     broadsea-content
+a510fc326c26   ohdsi/atlas:latest             "sh /tmp/envsubst.sh"    13 seconds ago   Up 10 seconds               8080/tcp                                                                                   ohdsi-atlas
+dabb38dc2b7e   ohdsi/broadsea-atlasdb:2.0.0   "docker-entrypoint.s…"   13 seconds ago   Up 10 seconds (healthy)     0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp                                                broadsea-atlasdb
+dab03e1364e8   ohdsi/broadsea-hades:4.2.1     "/usr/bin/supervisor…"   13 seconds ago   Up 10 seconds               0.0.0.0:6311->6311/tcp, [::]:6311->6311/tcp, 0.0.0.0:8787->8787/tcp, [::]:8787->8787/tcp   broadsea-hades
+8cb014bc83bb   hello-world                    "/hello"                 40 minutes ago   Exited (0) 40 minutes ago                                                                                              awesome_cohen
+fc72d3a2d072   scygu/no-code-app:v.0.2        "R -q -e 'shiny::run…"   8 weeks ago      Up 23 minutes               0.0.0.0:3838->3838/tcp, [::]:3838->3838/tcp                                                no-code-app
+9653b358f53a   scygu/no-code-pycaret:v.0.1    "uvicorn main:app --…"   8 weeks ago      Up 23 minutes               0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp                                                no-code-pycaret
+belayneh@Belayneh:/mnt/c/Users/Belayneh/Broadsea$ docker logs ohdsi-atlas
+
+
+-------------------------------------------------------------------------------------------------
+
+####C:\Program Files\PostgreSQL\17\bin>pg_dump -U postgres -d napes -F p -n napes_hiv_data -n omop_5_4 -n omop_5_4_results -f "C:/Users/Belayneh/Disk(D)/Dump_file/napes_selected_schemas.sql"
+
+#### docker cp "/mnt/c/Users/Belayneh/Disk(D)/Dump_file/napes_selected_schemas.sql" broadsea-atlasdb:/tmp/
+
+### docker exec -i broadsea-atlasdb psql -U postgres -d postgres -f /tmp/napes_selected_schemas.sql
+
+#####http://127.0.0.1/WebAPI/ddl/results?dialect=postgresql&schema=omop_5_4_results&vocabSchema=omop_5_4&tempSchema=tmp&initConceptHierarchy=true
+
+
+##### INSERT INTO webapi.source (source_id, source_name, source_key, source_connection, source_dialect,is_cache_enabled) 
+SELECT nextval('webapi.source_sequence'), 'napes_hiv_data', 'Data_01', 'jdbc:postgresql://broadsea-atlasdb:5432/postgres?user=postgres&password=mypass', 'postgresql',
+true;
+
+
+#####SELECT source_id, source_name, source_key, source_connection 
+FROM webapi.source;
+
+
+
+####INSERT INTO webapi.source_daimon (source_daimon_id, source_id, daimon_type, table_qualifier, priority)
+SELECT nextval('webapi.source_daimon_sequence'), source_id, 0, 'napes_hiv_data', 0
+FROM webapi.source
+WHERE source_key = 'Data_01';
+
+
+
+#####INSERT INTO webapi.source_daimon (source_daimon_id, source_id, daimon_type, table_qualifier, priority)
+SELECT nextval('webapi.source_daimon_sequence'), source_id, 1, 'omop_5_4', 10
+FROM webapi.source
+WHERE source_key = 'Data_01';
+
+
+
+#### INSERT INTO webapi.source_daimon (source_daimon_id, source_id, daimon_type, table_qualifier, priority)
+SELECT nextval('webapi.source_daimon_sequence'), source_id, 2, 'omop_5_4_results', 1
+FROM webapi.source
+WHERE source_key = 'Data_01';
+
+
+### http://127.0.0.1/WebAPI/source/refresh
+
+
