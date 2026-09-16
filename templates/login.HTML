@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHIVCare | Medical Access</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #34495e;
+            --accent: #e74c3c;
+            --success: #27ae60;
+            --bg: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 450px;
+            transition: all 0.3s ease;
+        }
+
+        .hidden { display: none !important; }
+        h2 { color: var(--primary); text-align: center; margin-bottom: 1.5rem; }
+        
+        .input-group {
+            position: relative;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .error-input { border: 1px solid var(--accent) !important; background-color: #fff8f8; }
+        
+        .error-msg {
+            color: var(--accent);
+            font-size: 0.75rem;
+            margin-top: 4px;
+            display: none;
+            align-items: center;
+            gap: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        button:hover { background: var(--secondary); }
+
+        .auth-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .link-btn {
+            background: none;
+            color: var(--primary);
+            text-decoration: underline;
+            font-size: 0.85rem;
+            padding: 0;
+            width: auto;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .link-btn:hover { color: var(--accent); }
+        .verify-text { text-align: center; color: #666; font-size: 0.9rem; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="login-box" class="container">
+        <i class="fas fa-user-md" style="font-size: 3rem; color: var(--primary); display: block; text-align: center;"></i>
+        <h2>Welcome to Login</h2>
+        <div class="input-group">
+            <input type="text" id="log-username" placeholder="Username">
+            <div id="err-log-username" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+        </div>
+        <div class="input-group">
+            <input type="password" id="log-password" placeholder="Password">
+            <div id="err-log-password" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+        </div>
+        <button onclick="handleLogin()">Login</button>
+        
+        <div class="auth-links">
+            <button class="link-btn" onclick="showSection('register')">Create Account</button>
+            <button class="link-btn" onclick="showSection('forgot')">Forgot Password?</button>
+        </div>
+    </div>
+
+    <div id="register-box" class="container hidden">
+        <i class="fas fa-user-plus" style="font-size: 3rem; color: var(--primary); display: block; text-align: center;"></i>
+        <h2>Create Account</h2>
+        <div id="reg-form">
+            <div class="input-group">
+                <input type="text" id="reg-username" placeholder="Choose Username">
+                <div id="err-reg-username" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <div class="input-group">
+                <input type="email" id="reg-email" placeholder="Medical Email">
+                <div id="err-reg-email" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="reg-password" placeholder="Create Password">
+                <div id="err-reg-password" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <button onclick="handleRegister()">Register Account</button>
+        </div>
+
+        <div id="reg-verify-area" class="hidden">
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+            <p class="verify-text">Verification code sent to email.</p>
+            <div class="input-group">
+                <input type="text" id="reg-verify-code" placeholder="Enter 6-Digit Code" maxlength="6">
+                <div id="err-reg-verify-code" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <button onclick="submitRegistrationCode()">Verify & Activate</button>
+        </div>
+        <button class="link-btn" style="display:block; margin: 15px auto;" onclick="showSection('login')">Back to Login</button>
+    </div>
+
+    <div id="forgot-box" class="container hidden">
+        <h2>Reset Credentials</h2>
+        
+        <div id="forgot-step-1">
+            <p style="text-align: center; color: #666;">Enter your email to receive a 6-digit code.</p>
+            <div class="input-group">
+                <input type="email" id="reset-email" placeholder="Your Registered Email">
+                <div id="err-reset-email" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <button onclick="sendResetCode()">Send Verification Code</button>
+        </div>
+        
+        <div id="otp-area" class="hidden">
+            <p style="text-align: center; color: var(--primary); font-weight: bold;">Check your email for the code.</p>
+            <div class="input-group">
+                <input type="text" id="otp-code" placeholder="6-Digit Code">
+                <div id="err-otp-code" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <div class="input-group">
+                <input type="password" id="new-password" placeholder="New Password">
+                <div id="err-new-password" class="error-msg"><i class="fas fa-exclamation-triangle"></i> Please fill this field</div>
+            </div>
+            <button onclick="verifyAndReset()">Update & Login</button>
+        </div>
+        <button class="link-btn" style="display:block; margin: 15px auto;" onclick="showSection('login')">Back to Login</button>
+    </div>
+
+    <script>
+        function validate(id, type = "text") {
+            const input = document.getElementById(id);
+            const errorDiv = document.getElementById('err-' + id);
+            const val = input.value.trim();
+            let isValid = true;
+            let message = "Please fill this field";
+
+            if (val === "") {
+                isValid = false;
+            } 
+            else if (type === "email") {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(val)) {
+                    isValid = false;
+                    message = "Please fill the correct email form";
+                }
+            }
+
+            if (!isValid) {
+                input.classList.add('error-input');
+                errorDiv.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${message}`;
+                errorDiv.style.display = 'flex';
+            } else {
+                input.classList.remove('error-input');
+                errorDiv.style.display = 'none';
+            }
+            return isValid;
+        }
+
+        function showSection(section) {
+            document.querySelectorAll('input').forEach(i => {
+                i.value = "";
+                i.classList.remove('error-input');
+            });
+            document.querySelectorAll('.error-msg').forEach(d => d.style.display = 'none');
+            
+            document.getElementById('login-box').classList.add('hidden');
+            document.getElementById('register-box').classList.add('hidden');
+            document.getElementById('forgot-box').classList.add('hidden');
+
+            if (section === 'login') document.getElementById('login-box').classList.remove('hidden');
+            if (section === 'register') {
+                document.getElementById('register-box').classList.remove('hidden');
+                document.getElementById('reg-form').classList.remove('hidden');
+                document.getElementById('reg-verify-area').classList.add('hidden');
+            }
+            if (section === 'forgot') {
+                document.getElementById('forgot-box').classList.remove('hidden');
+                document.getElementById('forgot-step-1').classList.remove('hidden');
+                document.getElementById('otp-area').classList.add('hidden');
+            }
+        }
+
+        async function handleLogin() {
+            if(!validate('log-username') || !validate('log-password')) return;
+            const res = await fetch('/auth/login', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ 
+                    username: document.getElementById('log-username').value, 
+                    password: document.getElementById('log-password').value 
+                })
+            });
+            const data = await res.json();
+            if (data.success) window.location.href = "/dashboard";
+            else alert("Error: " + data.message);
+        }
+
+        async function handleRegister() {
+            if(!validate('reg-username') || !validate('reg-email', 'email') || !validate('reg-password')) return;
+            const res = await fetch('/auth/register', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ 
+                    username: document.getElementById('reg-username').value, 
+                    email: document.getElementById('reg-email').value, 
+                    password: document.getElementById('reg-password').value 
+                })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Account successfully created! Please check your email to verify your account.");
+                document.getElementById('reg-form').classList.add('hidden');
+                document.getElementById('reg-verify-area').classList.remove('hidden');
+            } else alert(data.message);
+        }
+
+        async function submitRegistrationCode() {
+            if(!validate('reg-verify-code')) return;
+            const res = await fetch('/auth/verify-registration', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ 
+                    username: document.getElementById('reg-username').value, 
+                    code: document.getElementById('reg-verify-code').value 
+                })
+            });
+            const data = await res.json();
+            if (data.success) { alert("Verified!"); showSection('login'); }
+            else alert("Invalid code.");
+        }
+
+        async function sendResetCode() {
+            if(!validate('reset-email', 'email')) return;
+            const res = await fetch('/auth/forgot-password', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ email: document.getElementById('reset-email').value })
+            });
+            const data = await res.json();
+            if (data.success) {
+                alert("Verification code sent! You can check your email.");
+                document.getElementById('forgot-step-1').classList.add('hidden');
+                document.getElementById('otp-area').classList.remove('hidden');
+            } else alert("Email not found.");
+        }
+
+        async function verifyAndReset() {
+            if(!validate('otp-code') || !validate('new-password')) return;
+            const res = await fetch('/auth/reset-verify', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ 
+                    code: document.getElementById('otp-code').value, 
+                    new_password: document.getElementById('new-password').value 
+                })
+            });
+            const data = await res.json();
+            if (data.success) { alert("Updated!"); showSection('login'); }
+            else alert("Invalid code.");
+        }
+
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('input', () => {
+                input.classList.remove('error-input');
+                const err = document.getElementById('err-' + input.id);
+                if(err) err.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

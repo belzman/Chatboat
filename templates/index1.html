@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SmartHIVCare | Bilingual ART Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        .chat-container { max-width: 500px; margin: 30px auto; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); overflow: hidden; }
+        
+        /* Centered Title with Right-Aligned Button */
+        .header { 
+            background: linear-gradient(135deg, #0d6efd 0%, #004085 100%); 
+            color: white; 
+            padding: 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Spacer to balance the flexbox and keep title perfectly centered */
+        .header-spacer {
+            width: 110px; /* Approximately the width of the clear button */
+        }
+
+        .header h4 {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0;
+        }
+        
+        #chat-window { height: 350px; overflow-y: auto; padding: 25px; background: #fafafa; display: flex; flex-direction: column; gap: 20px; }
+        
+        .message-group { display: flex; flex-direction: column; width: 100%; }
+        .message { max-width: 80%; padding: 12px 18px; border-radius: 18px; position: relative; font-size: 15px; line-height: 1.5; }
+        
+        .user-group { align-items: flex-end; }
+        .user-msg { background: #007bff; color: white; border-bottom-right-radius: 2px; }
+        
+        .bot-group { align-items: flex-start; }
+        .bot-msg { 
+            background: #e9ecef; 
+            color: #333; 
+            border-bottom-left-radius: 2px; 
+            border: 1px solid #dee2e6; 
+            white-space: pre-wrap; 
+            position: relative; 
+        }
+
+        .copy-icon {
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-left: 10px;
+            color: #6c757d;
+            transition: color 0.2s;
+        }
+        .copy-icon:hover { color: #0d6efd; }
+
+        .transcription-tag { font-size: 0.85rem; color: #666; font-style: italic; border-bottom: 1px dashed #ccc; margin-bottom: 8px; display: block; }
+
+        .action-btns { font-size: 11px; margin-top: 5px; color: #007bff; cursor: pointer; }
+        .edit-area { width: 100%; border: 1px solid #007bff; border-radius: 10px; padding: 10px; min-height: 60px; margin-bottom: 5px; }
+
+        .controls { padding: 20px; background: #fff; border-top: 1px solid #eee; }
+        #loading { display: none; text-align: center; font-size: 14px; color: #0d6efd; margin-bottom: 10px; font-weight: bold; }
+        .recording-status { color: #dc3545; font-weight: bold; animation: blink 1s infinite; display: none; }
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">
+        <div class="header-spacer d-none d-sm-block"></div>
+        
+        <h3 class="mb-0">🩺 SmartHIVCare 🩺</h3>
+        
+        <div class="header-action">
+            <button class="btn btn-sm btn-outline-light" onclick="clearHistory()">🗑️ Reset</button>
+        </div>
+    </div>
+
+    <div id="chat-window">
+        <div class="message-group bot-group">
+            <div class="message bot-msg" id="welcome-text">
+                Hello! I am your medical assistant. How can I help you with HIV/AIDS or ART treatment today?
+            </div>
+        </div>
+    </div>
+
+    <div id="loading">✨ Analyzing medical document... Please wait.</div>
+
+    <div class="controls">
+        <div class="row g-2 mb-3">
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Language / ቋንቋ</label>
+                <select id="language" class="form-select form-select-sm" onchange="updateWelcomeMessage()">
+                    <option value="English" selected>English</option>
+                    <option value="Amharic">አማርኛ (Amharic)</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Input Mode</label>
+                <select id="input_mode" class="form-select form-select-sm" onchange="toggleInputUI()">
+                    <option value="Text">Text Mode</option>
+                    <option value="Voice">Voice Mode</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label small fw-bold">Output Mode</label>
+                <select id="output_mode" class="form-select form-select-sm">
+                    <option value="Text">Text Response</option>
+                    <option value="Voice">Voice Response</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="text-input-wrapper">
+            <textarea id="user-input" class="form-control mb-2" rows="2" placeholder="Type your medical question..."></textarea>
+        </div>
+
+        <div id="voice-input-wrapper" style="display:none;" class="mb-2">
+            <div class="d-flex gap-2">
+                <button class="btn btn-outline-danger flex-grow-1" id="record-btn">🎤 Click to Record</button>
+                <button class="btn btn-outline-secondary" id="play-record-btn" style="display:none;">▶️ Review</button>
+            </div>
+            <div id="record-status" class="recording-status text-center mt-1">🔴 Recording Audio...</div>
+        </div>
+
+        <button class="btn btn-primary w-100 py-2 fw-bold" id="ask-btn">Ask SmartHIVCare</button>
+        <audio id="audio-player" class="mt-3 w-100" controls style="display:none;"></audio>
+    </div>
+</div>
+
+<script>
+    const chatWindow = document.getElementById('chat-window');
+    const userInput = document.getElementById('user-input');
+    const askBtn = document.getElementById('ask-btn');
+    const recordBtn = document.getElementById('record-btn');
+    const playRecordBtn = document.getElementById('play-record-btn');
+    const audioPlayer = document.getElementById('audio-player');
+    const loading = document.getElementById('loading');
+    const recordStatus = document.getElementById('record-status');
+
+    let mediaRecorder;
+    let audioChunks = [];
+    let lastRecordedBlob = null;
+    let reviewAudio = new Audio();
+
+    function copyAnswer(id) {
+        const textToCopy = document.getElementById(`content-${id}`).innerText;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const btn = document.getElementById(`btn-${id}`);
+            btn.innerText = "✅";
+            setTimeout(() => { btn.innerText = "📋"; }, 2000);
+        });
+    }
+
+    function updateWelcomeMessage() {
+        const lang = document.getElementById('language').value;
+        document.getElementById('welcome-text').innerText = (lang === "Amharic") 
+            ? "ጤና ይስጥልኝ! ስለ HIV/AIDS ወይም ስለ ART ህክምና ምን ማወቅ ይፈልጋሉ?" 
+            : "Hello! I am your medical assistant. How can I help you with HIV/AIDS or ART treatment today?";
+    }
+
+    function toggleInputUI() {
+        const mode = document.getElementById('input_mode').value;
+        document.getElementById('text-input-wrapper').style.display = (mode === 'Text') ? 'block' : 'none';
+        document.getElementById('voice-input-wrapper').style.display = (mode === 'Voice') ? 'block' : 'none';
+        lastRecordedBlob = null;
+        playRecordBtn.style.display = 'none';
+    }
+
+    function appendMessage(role, text, transcription = null, id = Date.now()) {
+        const group = document.createElement('div');
+        group.className = `message-group ${role === 'user' ? 'user-group' : 'bot-group'} chat-entry`;
+        group.id = `msg-container-${id}`;
+
+        if (role === 'user') {
+            group.innerHTML = `
+                <div class="message user-msg" id="text-bubble-${id}">${text}</div>
+                <div class="action-btns" id="actions-${id}">
+                    <span onclick="startInPlaceEdit('${id}')">✏️ Edit</span> | 
+                    <span class="text-danger" onclick="deleteMessage('${id}')">🗑️ Delete</span>
+                </div>`;
+        } else {
+            let content = text;
+            if (transcription) {
+                content = `<span class="transcription-tag">👂 I heard: "${transcription}"</span><span id="content-${id}">${text}</span>`;
+            } else {
+                content = `<span id="content-${id}">${text}</span>`;
+            }
+            
+            group.innerHTML = `
+                <div class="d-flex align-items-start">
+                    <div class="message bot-msg">${content}</div>
+                    <span class="copy-icon" id="btn-${id}" onclick="copyAnswer('${id}')" title="Copy Answer">📋</span>
+                </div>`;
+        }
+
+        chatWindow.appendChild(group);
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+        return id;
+    }
+
+    function startInPlaceEdit(id) {
+        const bubble = document.getElementById(`text-bubble-${id}`);
+        const currentText = bubble.innerText;
+        bubble.innerHTML = `
+            <textarea class="edit-area" id="edit-field-${id}">${currentText}</textarea>
+            <button class="btn btn-sm btn-primary w-100" onclick="saveInPlaceEdit('${id}')">Save & Re-ask</button>
+        `;
+        document.getElementById(`actions-${id}`).style.display = 'none';
+    }
+
+    function saveInPlaceEdit(id) {
+        const newText = document.getElementById(`edit-field-${id}`).value;
+        const container = document.getElementById(`msg-container-${id}`);
+        if (container.nextElementSibling && container.nextElementSibling.classList.contains('bot-group')) {
+            container.nextElementSibling.remove();
+        }
+        container.remove();
+        appendMessage('user', newText, null, id);
+        sendApiRequest(newText);
+    }
+
+    function deleteMessage(id) {
+        if (confirm("Remove this interaction?")) {
+            const userMsg = document.getElementById(`msg-container-${id}`);
+            if (userMsg.nextElementSibling && userMsg.nextElementSibling.classList.contains('bot-group')) {
+                userMsg.nextElementSibling.remove();
+            }
+            userMsg.remove();
+        }
+    }
+
+    function clearHistory() {
+        if (confirm("Clear all messages?")) {
+            document.querySelectorAll('.chat-entry').forEach(e => e.remove());
+        }
+    }
+
+    recordBtn.onclick = async () => {
+        if (!mediaRecorder || mediaRecorder.state === "inactive") {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                mediaRecorder = new MediaRecorder(stream);
+                audioChunks = [];
+                mediaRecorder.ondataavailable = e => audioChunks.push(e.data);
+                mediaRecorder.onstop = () => {
+                    lastRecordedBlob = new Blob(audioChunks, { type: 'audio/wav' });
+                    reviewAudio.src = URL.createObjectURL(lastRecordedBlob);
+                    playRecordBtn.style.display = 'block';
+                    recordBtn.innerText = "🎤 Re-record";
+                };
+                mediaRecorder.start();
+                recordStatus.style.display = 'block';
+                recordBtn.innerText = "⏹ Stop Recording";
+            } catch (err) {
+                alert("Microphone access denied. Please check browser permissions.");
+            }
+        } else {
+            mediaRecorder.stop();
+            recordStatus.style.display = 'none';
+            mediaRecorder.stream.getTracks().forEach(track => track.stop());
+        }
+    };
+
+    playRecordBtn.onclick = () => reviewAudio.play();
+
+    async function sendApiRequest(text, blob = null) {
+        const formData = new FormData();
+        const outputMode = document.getElementById('output_mode').value;
+        formData.append('language', document.getElementById('language').value);
+        formData.append('answer_mode', outputMode);
+
+        if (blob) {
+            formData.append('question', blob, 'recording.wav');
+        } else {
+            formData.append('question', text);
+        }
+
+        loading.style.display = "block";
+        audioPlayer.style.display = "none";
+
+        try {
+            const response = await fetch('/ask', { method: 'POST', body: formData });
+            const data = await response.json();
+            
+            if (data.error) throw new Error(data.error);
+
+            appendMessage('bot', data.answer, data.transcription);
+
+            if (outputMode === "Voice" && data.audio && data.audio !== "") {
+                audioPlayer.src = `data:audio/wav;base64,${data.audio}`;
+                audioPlayer.style.display = "block";
+                audioPlayer.play().catch(e => console.warn("Auto-play blocked:", e));
+            }
+        } catch (e) {
+            console.error(e);
+            appendMessage('bot', "⚠️ Error: " + e.message);
+        } finally {
+            loading.style.display = "none";
+        }
+    }
+
+    askBtn.onclick = () => {
+        const mode = document.getElementById('input_mode').value;
+        if (mode === 'Text') {
+            const text = userInput.value.trim();
+            if (!text) return;
+            appendMessage('user', text);
+            sendApiRequest(text);
+            userInput.value = "";
+        } else {
+            if (!lastRecordedBlob) return alert("Please record your voice first.");
+            appendMessage('user', "🎙️ (Processing Voice Query...)");
+            sendApiRequest(null, lastRecordedBlob);
+            lastRecordedBlob = null;
+            playRecordBtn.style.display = 'none';
+            recordBtn.innerText = "🎤 Click to Record";
+        }
+    };
+</script>
+</body>
+</html>
