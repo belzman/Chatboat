@@ -46,3 +46,7 @@ model/runs/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Temporary Office / lock files
+~$*
+*.tmp
